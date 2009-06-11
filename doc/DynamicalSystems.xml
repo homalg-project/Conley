@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+  DynamicalSystems.xml            Conley package documentation            Mohamed Barakat
+
+         Copyright (C) 2009, Mohamed Barakat, Universität des Saarlandes
+
+-->
+
+<Chapter Label="DynamicalSystems">
+<Heading>Dynamical Systems</Heading>
+
+<Section Label="DynamicalSystems:Category">
+<Heading>Dynamical Systems: Category and Representations</Heading>
+
+<#Include Label="IsDynamicalSystem">
+
+<#Include Label="IsDynamicalSystemRep">
+
+</Section>
+
+<Section Label="Dynamical Systems:Constructors">
+<Heading>Dynamical Systems: Constructors</Heading>
+
+<#Include Label="DynamicalSystem">
+
+</Section>
+
+<Section Label="DynamicalSystems:Operations">
+<Heading>Dynamical Systems: Operations and Functions</Heading>
+
+<#Include Label="MorseDecomposition">
+
+</Section>
+<!-- ############################################################ -->
+
+</Chapter>

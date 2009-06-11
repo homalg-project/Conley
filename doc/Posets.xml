@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+  Posets.xml            Conley package documentation            Mohamed Barakat
+
+         Copyright (C) 2009, Mohamed Barakat, Universität des Saarlandes
+
+-->
+
+<Chapter Label="Posets">
+<Heading>Posets</Heading>
+
+<Section Label="Posets:Category">
+<Heading>Posets: Category and Representations</Heading>
+
+<#Include Label="IsPoset">
+
+<#Include Label="IsPosetRep">
+
+</Section>
+
+<Section Label="Posets:Attributes">
+<Heading>Posets: Attributes</Heading>
+
+<#Include Label="Length:poset">
+
+</Section>
+
+<Section Label="Posets:Constructors">
+<Heading>Posets: Constructors</Heading>
+
+<#Include Label="Poset">
+
+</Section>
+
+<Section Label="Posets:Operations">
+<Heading>Posets: Operations and Functions</Heading>
+
+<#Include Label="UnderlyingSet">
+<#Include Label="PartialOrder">
+
+</Section>
+<!-- ############################################################ -->
+
+</Chapter>

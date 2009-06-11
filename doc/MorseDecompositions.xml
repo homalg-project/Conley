@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+  MorseDecompositions.xml            Conley package documentation            Mohamed Barakat
+
+         Copyright (C) 2009, Mohamed Barakat, Universität des Saarlandes
+
+-->
+
+<Chapter Label="MorseDecompositions">
+<Heading>Morse Decompositions</Heading>
+
+<Section Label="MorseDecompositions:Category">
+<Heading>Morse Decompositions: Category and Representations</Heading>
+
+<#Include Label="IsMorseDecomposition">
+
+<#Include Label="IsMorseDecompositionRep">
+
+</Section>
+
+<Section Label="MorseDecomposition:Attributes">
+<Heading>Morse Decompositions: Attributes</Heading>
+
+<#Include Label="Length:MorseDecomp">
+
+</Section>
+
+<Section Label="MorseDecompositions:Constructors">
+<Heading>Morse Decompositions: Constructors</Heading>
+
+<#Include Label="MorseDecomposition:constructor">
+
+</Section>
+
+<Section Label="MorseDecompositions:Operations">
+<Heading>Morse Decompositions: Operations and Functions</Heading>
+
+<#Include Label="UnderlyingPoset">
+<#Include Label="HomologyConleyIndices">
+
+</Section>
+<!-- ############################################################ -->
+
+</Chapter>
