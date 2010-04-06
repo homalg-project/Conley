@@ -22,9 +22,14 @@ list := [
          "../examples/Franzosa.g"
          ];
 
-TestManualExamples( "doc", "Conley.xml", list );
+size := SizeScreen( );
+SizeScreen([80]);
 
-GAPDocManualLab("Conley");
+TestManualExamples( DirectoriesPackageLibrary( "Conley", "doc" )[1]![1], "Conley.xml", list );
+
+GAPDocManualLab( "Conley" );
+
+SizeScreen( size );
 
 quit;
 

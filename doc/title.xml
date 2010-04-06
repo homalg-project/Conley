@@ -4,7 +4,7 @@
 
   title.xml             Conley package documentation           Mohamed Barakat
 
-         Copyright (C) 2009, Mohamed Barakat, Universität des Saarlandes
+         Copyright (C) 2009-2010, Mohamed Barakat, Universität des Saarlandes
 
 -->
 <TitlePage>
@@ -18,18 +18,18 @@
   <Version>Version <#Include SYSTEM "../VERSION"></Version>
   <Author>Mohamed Barakat<Alt Only="LaTeX"><Br/></Alt>
     <Address>
-      Universität des Saarlandes, <Br/>
-      66041 Saarbrücken, <Br/>
-      Building E2 4, <Br/>
+      Department of Mathematics, <Br/>
+      University of Kaiserslautern, <Br/>
+      67653 Kaiserslautern, <Br/>
       Germany
     </Address>
-    <Email>barakat@math.uni-sb.de</Email>
+    <Email>barakat@mathematik.uni-kl.de</Email>
     <Homepage>http://wwwb.math.rwth-aachen.de/&tilde;barakat/</Homepage>
   </Author>
-  <Date>January 2009</Date>
+  <Date>April 2010</Date>
   
   <Copyright>
-    &copyright; 2009 by Mohamed Barakat <P/>
+    &copyright; 2009-2010 by Mohamed Barakat <P/>
     
     This package may be distributed under the terms and conditions of the
     GNU Public License Version 2.
