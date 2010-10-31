@@ -17,7 +17,7 @@ test:	doc
 archive: test
 	(mkdir -p ../tar; cd ..; tar czvf tar/Conley.tar.gz --exclude ".DS_Store" --exclude "*~" Conley/doc/*.* Conley/doc/clean Conley/gap/*.{gi,gd} Conley/{CHANGES,PackageInfo.g,README,VERSION,init.g,read.g,makedoc.g,makefile,maketest.g} Conley/examples/*.g)
 
-WEBPOS=~/gap/pkg/Conley/public_html
+WEBPOS=public_html
 WEBPOS_FINAL=~/Sites/homalg-project/Conley
 
 towww: archive
