@@ -138,7 +138,7 @@ InstallMethod( PartialOrder,
     for i in [ 1 .. n ] do
         for j in [ 1 .. n ] do
             if i <> j and Position( rel, [ set[i], set[j] ] ) <> fail then
-                SetEntryOfHomalgMatrix( REL, i, j, 1 );
+                SetMatElm( REL, i, j, 1 );
             fi;
         od;
     od;
@@ -151,8 +151,8 @@ InstallMethod( PartialOrder,
     for i in [ 1 .. n ] do
         for j in [ 1 .. n ] do
             if i <> j then
-                a := GetEntryOfHomalgMatrix( REL2, i, j );
-                SetEntryOfHomalgMatrix( REL1, i, j, SignInt( a ) );
+                a := MatElm( REL2, i, j );
+                SetMatElm( REL1, i, j, SignInt( a ) );
             fi;
         od;
     od;
@@ -168,8 +168,8 @@ InstallMethod( PartialOrder,
         for i in [ 1 .. n ] do
             for j in [ 1 .. n ] do
                 if i <> j then
-                    a := GetEntryOfHomalgMatrix( REL2, i, j );
-                    SetEntryOfHomalgMatrix( REL1, i, j, SignInt( a ) );
+                    a := MatElm( REL2, i, j );
+                    SetMatElm( REL1, i, j, SignInt( a ) );
                 fi;
             od;
         od;
@@ -179,7 +179,7 @@ InstallMethod( PartialOrder,
     
     for i in [ 1 .. n ] do
         for j in [ 1 .. n ] do
-            if i <> j and GetEntryOfHomalgMatrix( REL, i, j ) = 1 then
+            if i <> j and MatElm( REL, i, j ) = 1 then
                 Add( ord, [ set[i], set[j] ] );
             fi;
         od;
