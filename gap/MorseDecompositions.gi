@@ -122,8 +122,9 @@ end );
 ##  gap> M := MorseDecomposition( P, [0,1,1], F2 );
 ##  <A Morse decomposition with 3 Morse sets>
 ##  gap> HomologyConleyIndices( M );
-##  [ <The zero left module>, <The free left module of rank 1 on a free generator>
-##      , <The free left module of rank 1 on a free generator> ]
+##  [ <The zero left vector space>,
+##    <The left vector space of dimension 1 on a free generator>,
+##    <The left vector space of dimension 1 on a free generator> ]
 ##  ]]></Example>
 ##    </Description>
 ##  </ManSection>
