@@ -88,7 +88,7 @@ end );
 ##  gap> P := Poset( [1,2,3], [[3,2],[2,1]] );
 ##  <A poset on 3 points>
 ##  gap> F2 := HomalgRingOfIntegers( 2 );
-##  <An internal ring>
+##  GF(2)
 ##  gap> M := MorseDecomposition( P, [0,1,1], F2 );
 ##  <A Morse decomposition with 3 Morse sets>
 ##  gap> UnderlyingPoset( M );
@@ -118,7 +118,7 @@ end );
 ##  gap> P := Poset( [1,2,3], [[3,2],[2,1]] );
 ##  <A poset on 3 points>
 ##  gap> F2 := HomalgRingOfIntegers( 2 );
-##  <An internal ring>
+##  GF(2)
 ##  gap> M := MorseDecomposition( P, [0,1,1], F2 );
 ##  <A Morse decomposition with 3 Morse sets>
 ##  gap> HomologyConleyIndices( M );
@@ -157,7 +157,7 @@ end );
 ##  gap> P := Poset( [1,2,3], [[3,2],[2,1]] );
 ##  <A poset on 3 points>
 ##  gap> F2 := HomalgRingOfIntegers( 2 );
-##  <An internal ring>
+##  GF(2)
 ##  gap> M := MorseDecomposition( P, [0,1,1], F2 );
 ##  <A Morse decomposition with 3 Morse sets>
 ##  ]]></Example>

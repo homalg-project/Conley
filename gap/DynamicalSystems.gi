@@ -60,7 +60,7 @@ BindGlobal( "TheTypeDynamicalSystem",
 ##      The default Morse decomposition of the dynamical system <A>phi</A>.
 ##      <Example><![CDATA[
 ##  gap> F2 := HomalgRingOfIntegers( 2 );
-##  <An internal ring>
+##  GF(2)
 ##  gap> phi := DynamicalSystem( [1,2,3], [[3,2],[2,1]], [0,1,1], F2 );
 ##  <A dynamical system given by <A Morse decomposition with 3 Morse sets>>
 ##  gap> M := MorseDecomposition( phi );
@@ -101,7 +101,7 @@ end );
 ##      <A>rel</A> and a list of Conley indices <A>CHp</A> over the coefficient ring <A>R</A>).
 ##      <Example><![CDATA[
 ##  gap> F2 := HomalgRingOfIntegers( 2 );
-##  <An internal ring>
+##  GF(2)
 ##  gap> phi := DynamicalSystem( [3,2,1], [[3,2],[2,1]], [0,1,1], F2 );
 ##  <A dynamical system given by <A Morse decomposition with 3 Morse sets>>
 ##  ]]></Example>
