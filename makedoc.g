@@ -23,9 +23,11 @@ list := [
          "../examples/Franzosa.g"
          ];
 
+PrintTo( "VERSION", PackageInfo( "Conley" )[1].Version );
+
 MakeGAPDocDoc( "doc", "Conley", list, "Conley" );
 
 GAPDocManualLab("Conley");
 
-quit;
+QUIT;
 

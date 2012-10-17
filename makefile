@@ -3,7 +3,7 @@ all: doc test
 doc: doc/manual.six
 
 doc/manual.six: makedoc.g maketest.g \
-		PackageInfo.g VERSION \
+		PackageInfo.g \
 		doc/Conley.bib doc/*.xml \
 		gap/*.gd gap/*.gi examples/*.g
 	        gap makedoc.g
@@ -15,7 +15,7 @@ test:	doc
 	gap maketest.g
 
 archive: test
-	(mkdir -p ../tar; cd ..; tar czvf tar/Conley.tar.gz --exclude ".DS_Store" --exclude "*~" Conley/doc/*.* Conley/doc/clean Conley/gap/*.{gi,gd} Conley/{CHANGES,PackageInfo.g,README,VERSION,init.g,read.g,makedoc.g,makefile,maketest.g} Conley/examples/*.g)
+	(mkdir -p ../tar; cd ..; tar czvf tar/Conley.tar.gz --exclude ".DS_Store" --exclude "*~" Conley/doc/*.* Conley/doc/clean Conley/gap/*.{gi,gd} Conley/{CHANGES,PackageInfo.g,README,VERSION,init.g,read.g,makedoc.g,makefile,maketest.g,ListOfDocFiles.g} Conley/examples/*.g)
 
 WEBPOS=public_html
 WEBPOS_FINAL=~/Sites/homalg-project/Conley
