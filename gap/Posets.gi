@@ -107,7 +107,7 @@ end );
 ##  <A poset on 3 points>
 ##  gap> PartialOrder( P );
 ##  [ [ 2, 1 ], [ 3, 1 ], [ 3, 2 ] ]
-##  gap> P := Poset( [1,2,3], [0,1,Float(3/2)] );
+##  gap> P := Poset( [1,2,3], [0,1,3/2] );
 ##  <A poset on 3 points>
 ##  gap> PartialOrder( P );
 ##  [ [ 2, 1 ], [ 3, 1 ], [ 3, 2 ] ]
@@ -206,7 +206,7 @@ end );
 ##      <Example><![CDATA[
 ##  gap> Poset( [1,2,3], [[3,2],[2,1]] );
 ##  <A poset on 3 points>
-##  gap> Poset( [1,2,3], [0,1,Float(3/2)] );
+##  gap> Poset( [1,2,3], [0,1,3/2] );
 ##  <A poset on 3 points>
 ##  ]]></Example>
 ##    </Description>
