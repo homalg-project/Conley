@@ -84,16 +84,6 @@ end );
 ##    </Description>
 ##  </ManSection>
 ##  <#/GAPDoc>
-##
-InstallMethod( UnderlyingSet,
-        "for posets",
-        [ IsPoset ],
-        
-  function( P )
-    
-    return P!.set;
-    
-end );
 
 ##  <#GAPDoc Label="PartialOrder">
 ##  <ManSection>
@@ -246,8 +236,7 @@ InstallMethod( Poset,
             Error( Difference( P, points ), " are not in points of the first argument\n");
         fi;
         
-        poset := rec( set := P,
-                      defining_relations := rel );
+        poset := rec( defining_relations := rel );
         
     elif Length( _P ) = Length( _rel ) then
         
@@ -271,14 +260,14 @@ InstallMethod( Poset,
         
         rel := Set( rel );
         
-        poset := rec( set := P,
-                      defining_relations := rel,
+        poset := rec( defining_relations := rel,
                       PartialOrder := rel );
         
     fi;
     
     ObjectifyWithAttributes(
-            poset, TheTypePoset
+            poset, TheTypePoset,
+            UnderlyingSet, P
             );
     
     return poset;

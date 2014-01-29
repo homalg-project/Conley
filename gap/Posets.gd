@@ -61,8 +61,8 @@ DeclareOperation( "Poset",
 
 # basic operations:
 
-DeclareOperation( "UnderlyingSet",
-        [ IsPoset ] );
+DeclareAttribute( "UnderlyingSet",
+        IsPoset );
 
 DeclareOperation( "PartialOrder",
         [ IsPoset ] );
