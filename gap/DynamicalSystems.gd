@@ -41,7 +41,7 @@ DeclareOperation( "DynamicalSystem",
         [ IsMorseDecomposition ] );
 
 DeclareOperation( "DynamicalSystem",
-        [ IsPoset, IsList, IsHomalgRing ] );
+        [ IsInGapCategoryOfPosets, IsList, IsHomalgRing ] );
 
 DeclareOperation( "DynamicalSystem",
         [ IsList, IsList, IsList, IsHomalgRing ] );

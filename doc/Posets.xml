@@ -14,9 +14,9 @@
 <Section Label="Posets:Category">
 <Heading>Posets: Category and Representations</Heading>
 
-<#Include Label="IsPoset">
+<#Include Label="IsInGapCategoryOfPosets">
 
-<#Include Label="IsPosetRep">
+<#Include Label="IsInGapCategoryOfPosetsRep">
 
 </Section>
 
@@ -37,7 +37,7 @@
 <Section Label="Posets:Operations">
 <Heading>Posets: Operations and Functions</Heading>
 
-<#Include Label="UnderlyingSet">
+<#Include Label="UnderlyingSetOfPoset">
 <#Include Label="PartialOrder">
 
 </Section>

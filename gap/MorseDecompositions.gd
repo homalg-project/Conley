@@ -47,7 +47,7 @@ DeclareAttribute( "Length",
 # constructors:
 
 DeclareOperation( "MorseDecomposition",
-        [ IsPoset, IsList, IsHomalgRing ] );
+        [ IsInGapCategoryOfPosets, IsList, IsHomalgRing ] );
 
 # basic operations:
 

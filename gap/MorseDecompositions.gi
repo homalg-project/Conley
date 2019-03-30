@@ -167,7 +167,7 @@ end );
 ##
 InstallMethod( MorseDecomposition,
         "for posets",
-        [ IsPoset, IsList, IsHomalgRing ],
+        [ IsInGapCategoryOfPosets, IsList, IsHomalgRing ],
         
   function( P, _CHp, R )
     local CHp, morse;
@@ -223,7 +223,7 @@ InstallMethod( Display,
     
     poset := UnderlyingPoset( M );
     
-    Print( "A Morse decomposition with underlying set:\n", UnderlyingSet( poset ) );
+    Print( "A Morse decomposition with underlying set:\n", UnderlyingSetOfPoset( poset ) );
     Print( ",\n\nhomology Conley indices:\n", HomologyConleyIndices( M ), "\n" );
     Print( ",\n\nand partial order:\n", PartialOrder( poset ), "\n" );
     

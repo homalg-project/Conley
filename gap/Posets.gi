@@ -14,21 +14,21 @@
 #
 ####################################
 
-# a new representation for the GAP-category IsPoset:
+# a new representation for the GAP-category IsInGapCategoryOfPosets:
 
-##  <#GAPDoc Label="IsPosetRep">
+##  <#GAPDoc Label="IsInGapCategoryOfPosetsRep">
 ##  <ManSection>
-##    <Filt Type="Representation" Arg="P" Name="IsPosetRep"/>
+##    <Filt Type="Representation" Arg="P" Name="IsInGapCategoryOfPosetsRep"/>
 ##    <Returns>true or false</Returns>
 ##    <Description>
 ##      The representation of posets. <P/>
-##      (It is a representation of the &GAP; category <Ref Filt="IsPoset"/>.)
+##      (It is a representation of the &GAP; category <Ref Filt="IsInGapCategoryOfPosets"/>.)
 ##    </Description>
 ##  </ManSection>
 ##  <#/GAPDoc>
 ##
-DeclareRepresentation( "IsPosetRep",
-        IsPoset,
+DeclareRepresentation( "IsInGapCategoryOfPosetsRep",
+        IsInGapCategoryOfPosets,
         [ "set", "defining_relations" ] );
 
 ####################################
@@ -38,13 +38,13 @@ DeclareRepresentation( "IsPosetRep",
 ####################################
 
 # a new family:
-BindGlobal( "TheFamilyOfPosets",
-        NewFamily( "TheFamilyOfPosets" ) );
+BindGlobal( "TheFamilyOfDynamicalPosets",
+        NewFamily( "TheFamilyOfDynamicalPosets" ) );
 
 # a new type:
-BindGlobal( "TheTypePoset",
-        NewType( TheFamilyOfPosets,
-                IsPosetRep ) );
+BindGlobal( "TheTypeDynamicalPoset",
+        NewType( TheFamilyOfDynamicalPosets,
+                IsInGapCategoryOfPosetsRep ) );
 
 ####################################
 #
@@ -55,11 +55,11 @@ BindGlobal( "TheTypePoset",
 ##
 InstallMethod( Length,
         "for posets",
-        [ IsPoset ],
+        [ IsInGapCategoryOfPosets ],
         
   function( P )
     
-    return Length( UnderlyingSet( P ) );
+    return Length( UnderlyingSetOfPoset( P ) );
     
 end );
 
@@ -69,16 +69,16 @@ end );
 #
 ####################################
 
-##  <#GAPDoc Label="UnderlyingSet">
+##  <#GAPDoc Label="UnderlyingSetOfPoset">
 ##  <ManSection>
-##    <Oper Arg="P" Name="UnderlyingSet" Label="for posets"/>
+##    <Oper Arg="P" Name="UnderlyingSetOfPoset" Label="for posets"/>
 ##    <Returns>a list</Returns>
 ##    <Description>
 ##      The set underlying the poset <A>P</A>.
 ##      <Example><![CDATA[
 ##  gap> Poset( [1,2,3], [[3,2],[2,1]] );
 ##  <A poset on 3 points>
-##  gap> UnderlyingSet( last );
+##  gap> UnderlyingSetOfPoset( last );
 ##  [ 1, 2, 3 ]
 ##  ]]></Example>
 ##    </Description>
@@ -108,7 +108,7 @@ end );
 ##
 InstallMethod( PartialOrder,
         "for posets",
-        [ IsPoset ],
+        [ IsInGapCategoryOfPosets ],
         
   function( P )
     local set, rel, n, REL, i, j, REL2, REL1, a, ord;
@@ -117,7 +117,7 @@ InstallMethod( PartialOrder,
         return P!.PartialOrder;
     fi;
     
-    set := UnderlyingSet( P );
+    set := UnderlyingSetOfPoset( P );
     rel := P!.defining_relations;
     
     n := Length( P );
@@ -266,8 +266,8 @@ InstallMethod( Poset,
     fi;
     
     ObjectifyWithAttributes(
-            poset, TheTypePoset,
-            UnderlyingSet, P
+            poset, TheTypeDynamicalPoset,
+            UnderlyingSetOfPoset, P
             );
     
     return poset;
@@ -283,7 +283,7 @@ end );
 ##
 InstallMethod( ViewObj,
         "for posets",
-        [ IsPoset ],
+        [ IsInGapCategoryOfPosets ],
         
   function( P )
     
@@ -294,11 +294,11 @@ end );
 ##
 InstallMethod( Display,
         "for posets",
-        [ IsPoset ],
+        [ IsInGapCategoryOfPosets ],
         
   function( P )
     
-    Print( "A poset with underlying set:\n", UnderlyingSet( P ), "\n\nand partial order:\n", PartialOrder( P ), "\n" );
+    Print( "A poset with underlying set:\n", UnderlyingSetOfPoset( P ), "\n\nand partial order:\n", PartialOrder( P ), "\n" );
     
 end );
 

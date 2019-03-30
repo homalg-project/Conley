@@ -133,7 +133,7 @@ end );
 ##
 InstallMethod( DynamicalSystem,
         "for posets",
-        [ IsPoset, IsList, IsHomalgRing ],
+        [ IsInGapCategoryOfPosets, IsList, IsHomalgRing ],
         
   function( P, CHp, R )
     

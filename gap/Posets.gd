@@ -16,9 +16,9 @@
 
 # a new GAP-category:
 
-##  <#GAPDoc Label="IsPoset">
+##  <#GAPDoc Label="IsInGapCategoryOfPosets">
 ##  <ManSection>
-##    <Filt Type="Category" Arg="A" Name="IsPoset"/>
+##    <Filt Type="Category" Arg="A" Name="IsInGapCategoryOfPosets"/>
 ##    <Returns>true or false</Returns>
 ##    <Description>
 ##      The &GAP; category of posets.
@@ -26,7 +26,7 @@
 ##  </ManSection>
 ##  <#/GAPDoc>
 ##
-DeclareCategory( "IsPoset",
+DeclareCategory( "IsInGapCategoryOfPosets",
         IsAttributeStoringRep );
 
 ####################################
@@ -46,7 +46,7 @@ DeclareCategory( "IsPoset",
 ##  <#/GAPDoc>
 ##
 DeclareAttribute( "Length",
-        IsPoset );
+        IsInGapCategoryOfPosets );
 
 ####################################
 #
@@ -61,9 +61,9 @@ DeclareOperation( "Poset",
 
 # basic operations:
 
-DeclareAttribute( "UnderlyingSet",
-        IsPoset );
+DeclareAttribute( "UnderlyingSetOfPoset",
+        IsInGapCategoryOfPosets );
 
 DeclareOperation( "PartialOrder",
-        [ IsPoset ] );
+        [ IsInGapCategoryOfPosets ] );
 
