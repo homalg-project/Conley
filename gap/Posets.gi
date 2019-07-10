@@ -128,7 +128,7 @@ InstallMethod( PartialOrder,
     for i in [ 1 .. n ] do
         for j in [ 1 .. n ] do
             if i <> j and Position( rel, [ set[i], set[j] ] ) <> fail then
-                SetMatElm( REL, i, j, 1 );
+                REL[ i, j ] := 1;
             fi;
         od;
     od;
@@ -141,8 +141,8 @@ InstallMethod( PartialOrder,
     for i in [ 1 .. n ] do
         for j in [ 1 .. n ] do
             if i <> j then
-                a := MatElm( REL2, i, j );
-                SetMatElm( REL1, i, j, SignInt( a ) );
+                a := REL2[ i, j ];
+                REL1[ i, j ] := SignInt( a );
             fi;
         od;
     od;
@@ -158,8 +158,8 @@ InstallMethod( PartialOrder,
         for i in [ 1 .. n ] do
             for j in [ 1 .. n ] do
                 if i <> j then
-                    a := MatElm( REL2, i, j );
-                    SetMatElm( REL1, i, j, SignInt( a ) );
+                    a := REL2[ i, j ];
+                    REL1[ i, j ] := SignInt( a );
                 fi;
             od;
         od;
@@ -169,7 +169,7 @@ InstallMethod( PartialOrder,
     
     for i in [ 1 .. n ] do
         for j in [ 1 .. n ] do
-            if i <> j and MatElm( REL, i, j ) = 1 then
+            if i <> j and REL[ i, j ] = 1 then
                 Add( ord, [ set[i], set[j] ] );
             fi;
         od;
